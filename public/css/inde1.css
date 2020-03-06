@@ -1,0 +1,53 @@
+.container {
+  width: 768px;
+  margin: 0 auto;
+  
+}  
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+.table, th, td {
+    border: 1px solid lightgray;
+    padding: 10px;
+
+  }
+  .table, th {
+      height: 25px;
+  }
+  .table {
+    border: none;
+  }
+  .text-center {
+    text-align: center;
+    vertical-align: center;
+    border: none;
+  }
+  #btn {
+    cursor: pointer;
+  }
+  h1 {
+      text-align: center;
+      color: silver;
+      
+  }
+  ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    
+  }
+  ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  ul {
+    background-color: silver;
+    text-align: center;
+  }
+
+
+
+  

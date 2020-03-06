@@ -1,0 +1,19 @@
+html
+  head
+    title pug
+    link(rel="stylesheet" href="/static/css/inde1.css")
+  body
+    ul
+       li
+         a(href="/") Home
+    h1 Product
+    table(style='width:100%', border = "1px")
+      each book in model
+        tr
+             td=book.column1
+             td=book.column2
+             td=book.column3
+
+             
+               
+

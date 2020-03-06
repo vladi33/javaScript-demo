@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/inde1.css"> 
+    <script src="https://kit.fontawesome.com/0abaef28ec.js" crossorigin="anonymous"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li><a href="/pug">Product</a></li>
+  </ul>
+    <h1>Table 2</h1>
+  <div class="conteiner">
+    <table class="table">
+        <thead>
+        <tr>
+          <th colspan="3">Product</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <td>Procesor</td>
+            <td class="name">Ram</td>
+            <td>Ssd</td>
+            <td class="text-center"><i class="fas fa-shopping-cart" id="btn"></i></td>
+          </tr>
+          <tr>
+            <td>Procesor</td>
+            <td class="name">Ram</td>
+            <td>Ssd</td>
+            <td class="text-center"><i class="fas fa-shopping-cart" id="btn"></i></td>
+          </tr>
+          <tr>
+            <td>Procesormm</td>
+            <td class="name">Rammmmm</td>
+            <td>Ssdmmm</td>
+            <td class="text-center"><i class="fas fa-shopping-cart" id="btn"></i></td>
+          </tr>
+          <tr>
+            <td>Procesor</td>
+            <td class="name">Ram</td>
+            <td>Ssd</td>
+            <td class="text-center"><i class="fas fa-shopping-cart" id="btn"></i></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+ 
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script>
+$('.table tbody').on('click', '#btn', function() {
+      var currow = $(this).closest('tr');
+      var col1 = currow.find('td:eq(0)').text();
+      var col2 = currow.find('td:eq(1)').text();
+      var col3 = currow.find('td:eq(2)').text();
+      var result = "Product added";
+      alert(result);
+
+      const arr = {
+        column1: col1,
+        column2: col2,
+        column3: col3,
+
+      };
+     
+      $.ajax({
+    type: 'POST',
+    url: "http://localhost:3000/",
+    data : JSON.stringify(arr),
+    contentType: "application/json",
+    success: function(data) {
+
+      console.log("data");
+
+    }
+
+  });
+
+      
+});
+
+
+  </script>
+
+</body>
+</html>
